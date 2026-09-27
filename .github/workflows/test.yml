@@ -1,0 +1,36 @@
+name: Test Portfolio Code Quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Code Quality & Syntax Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify Core Portfolio Files
+        run: |
+          echo "Verifying HTML, CSS, and JS files exist..."
+          test -f index.html || (echo "Error: index.html missing!" && exit 1)
+          test -f styles.css || (echo "Error: styles.css missing!" && exit 1)
+          test -f script.js || (echo "Error: script.js missing!" && exit 1)
+          test -f portfoliohtml.html || (echo "Error: portfoliohtml.html missing!" && exit 1)
+          echo "All core files present."
+
+      - name: Run HTMLHint Code Validation
+        run: |
+          npx -y htmlhint index.html portfoliohtml.html
