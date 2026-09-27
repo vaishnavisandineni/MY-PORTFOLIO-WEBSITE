@@ -5,6 +5,8 @@ profile_picture.*
 *.jpg
 *.jpeg
 profie_picture.*
+assets/profile.png
+assets/profile.*
 
 # OS and IDE files
 .DS_Store

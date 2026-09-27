@@ -124,11 +124,11 @@
 
                         <!-- Profile Image Frame -->
                         <div class="profile-image-frame">
-                            <!-- To show your profile picture locally, set src="profie_picture.png" or your image path -->
-                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23111725'/><circle cx='200' cy='150' r='60' fill='%23151D2E'/><path d='M100 340 Q200 230 300 340' fill='%23151D2E'/><text x='200' y='380' font-family='sans-serif' font-size='14' fill='%23727D91' text-anchor='middle'>Profile Photo Placeholder</text></svg>" 
+                            <img src="assets/profile.png" 
                                  alt="Vaishnavi Sandineni - Professional Profile" 
                                  class="profile-img"
-                                 id="profileImage">
+                                 id="profileImage"
+                                 onerror="this.style.display='none'; this.parentElement.querySelector('.profile-glow') && (this.parentElement.style.background='linear-gradient(135deg, #151D2E, #1e2740)')">
                             <div class="profile-glow"></div>
                         </div>
 
