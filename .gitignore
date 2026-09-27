@@ -1,0 +1,13 @@
+# Personal images and private media
+profie_picture.png
+profile_picture.png
+profile_picture.*
+*.jpg
+*.jpeg
+profie_picture.*
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
